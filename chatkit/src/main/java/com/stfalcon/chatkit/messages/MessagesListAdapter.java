@@ -259,6 +259,13 @@ public class MessagesListAdapter<MESSAGE extends IMessage>
     public void clear() {
         items.clear();
     }
+    
+    /**
+     * Checks if a message is present in the list
+     */
+    public boolean isMessageInList(MESSAGE message) {
+        return getMessagePositionById(message.getId()) > -1;
+    }
 
     /**
      * Enables selection mode.
